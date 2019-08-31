@@ -1,0 +1,25 @@
+{
+  "name": "proj1-brain-games",
+  "version": "1.0.0",
+  "description": "Проект Игры разума",
+  "main": "src/bin/brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeandv/frontend-project-lvl1.git"
+  },
+  "author": "Mike Andreev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeandv/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/mikeandv/frontend-project-lvl1#readme",
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/cli": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
+}
