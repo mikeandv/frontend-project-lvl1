@@ -6,7 +6,7 @@
 ## Installation
 
 ```shell
-npm inslall proj1-brain-games
+$ npm inslall proj1-brain-games
 ```
 
 ## Exapmles
