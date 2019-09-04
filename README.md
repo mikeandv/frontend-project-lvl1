@@ -11,22 +11,22 @@ npm inslall proj1-brain-games
 
 ## Exapmles
 
-### Brain-even
+### Brain-even game
 
 To start "Even Check" game run the following command:
 
 ```shell
-brain-even
+$ brain-even
 ```
 
 [![asciicast](https://asciinema.org/a/X04eWa9bJaTYXkvEAMJFOTrcG.svg)](https://asciinema.org/a/X04eWa9bJaTYXkvEAMJFOTrcG)
 
-### Brain-calc
+### Brain-calc game
 
 To start "Calculator" game run the following command:
 
 ```shell
-brain-calc
+$ brain-calc
 ```
 
 [![asciicast](https://asciinema.org/a/C6N7sGIUXy9Tyb9pIqwyAc0eS.svg)](https://asciinema.org/a/C6N7sGIUXy9Tyb9pIqwyAc0eS)
