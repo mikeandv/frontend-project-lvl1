@@ -30,3 +30,13 @@ $ brain-calc
 ```
 
 [![asciicast](https://asciinema.org/a/C6N7sGIUXy9Tyb9pIqwyAc0eS.svg)](https://asciinema.org/a/C6N7sGIUXy9Tyb9pIqwyAc0eS)
+
+### Brain-gcd game
+
+To start "Greatest common factor" game run the following command:
+
+```shell
+$ brain-gcd
+```
+
+[![asciicast](https://asciinema.org/a/giyqH2CHBxGHRI8ib7r9lmIcp.svg)](https://asciinema.org/a/giyqH2CHBxGHRI8ib7r9lmIcp)
