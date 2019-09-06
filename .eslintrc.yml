@@ -1,7 +1,7 @@
 ---
+  
 plugins:
   - babel
-  
 env:
   node: true
 parser: babel-eslint

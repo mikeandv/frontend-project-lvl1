@@ -1,6 +1,8 @@
 import { l, cons as consList } from '@hexlet/pairs-data';
 
-export default (stagesCount, makeQ) => {
+export const randomNum = (scale) => Math.round(Math.random() * scale);
+export const randomNumInRange = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+export const generateQuestions = (stagesCount, makeQ) => {
   const iter = (item, acc) => {
     if (item === 0) {
       return acc;
