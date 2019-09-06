@@ -15,7 +15,7 @@ const randomOperator = (min, max) => {
     case 3:
       return '*';
     default:
-      return null;
+      return undefined;
   }
 };
 
@@ -28,7 +28,7 @@ const expressionResult = (leftNum, operation, rightNum) => {
     case '*':
       return `${leftNum * rightNum}`;
     default:
-      return null;
+      return undefined;
   }
 };
 

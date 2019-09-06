@@ -19,7 +19,7 @@ export default (stageCount, questionList, gameRules) => {
   const gameLoop = (stage, questions) => {
     if (stage === 0) {
       console.log(`Congratulations, ${playerName}!`);
-      return null;
+      return undefined;
     }
 
     const question = head(questions);
@@ -29,7 +29,7 @@ export default (stageCount, questionList, gameRules) => {
     if (cdr(question) !== answer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${cdr(question)}'.`);
       console.log(`Let's try again, ${playerName}!`);
-      return null;
+      return undefined;
     }
     console.log('Correct!');
 
