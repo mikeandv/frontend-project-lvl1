@@ -40,3 +40,13 @@ $ brain-gcd
 ```
 
 [![asciicast](https://asciinema.org/a/giyqH2CHBxGHRI8ib7r9lmIcp.svg)](https://asciinema.org/a/giyqH2CHBxGHRI8ib7r9lmIcp)
+
+### Brain-progression game
+
+To start "Arithmetic progression" game run the following command:
+
+```shell
+$ brain-progression
+```
+
+[![asciicast](https://asciinema.org/a/w4p2mXuiLvu3HGVcAcWhppxkA.svg)](https://asciinema.org/a/w4p2mXuiLvu3HGVcAcWhppxkA)
