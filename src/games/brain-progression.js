@@ -3,7 +3,7 @@ import {
   l, cons as consList, head, tail, isEmpty,
 } from '@hexlet/pairs-data';
 import gameLogic from '../core';
-import { generateQuestions, randomNum, randomNumInRange } from '../utils/questionsUtil';
+import { generateQuestions, getRandomNum, getRandomNumInRange } from '../utils/questionsUtil';
 
 const ruleText = 'What number is missing in the progression?';
 const MIN = 2;
@@ -42,9 +42,9 @@ const hideNumResult = (progression, hidePos) => {
 };
 
 const makeQuestion = () => {
-  const firstMember = randomNum(100);
-  const depth = randomNumInRange(MIN, MAX);
-  const hidePosition = randomNumInRange(1, LENGTH);
+  const firstMember = getRandomNum(100);
+  const depth = getRandomNumInRange(MIN, MAX);
+  const hidePosition = getRandomNumInRange(1, LENGTH);
   const progression = bildProgression(LENGTH, depth, firstMember);
   return cons(hideNumResult(progression, hidePosition), getHideNum(progression, hidePosition));
 };
