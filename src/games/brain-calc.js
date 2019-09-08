@@ -1,12 +1,12 @@
 import { cons } from '@hexlet/pairs';
 import gameLogic from '../core';
-import { generateQuestions, randomNum, randomNumInRange } from '../utils/questionsUtil';
+import { generateQuestions, getRandomNum, getRandomNumInRange } from '../utils/questionsUtil';
 
 const ruleText = 'What is the result of the expression?';
 const MIN = 1;
 const MAX = 4;
 const randomOperator = (min, max) => {
-  const number = randomNumInRange(min, max);
+  const number = getRandomNumInRange(min, max);
   switch (number) {
     case 1:
       return '+';
@@ -33,8 +33,8 @@ const expressionResult = (leftNum, operation, rightNum) => {
 };
 
 const makeQuestion = () => {
-  const leftNum = randomNum(100);
-  const rightNum = randomNum(100);
+  const leftNum = getRandomNum(100);
+  const rightNum = getRandomNum(100);
   const operation = randomOperator(MIN, MAX);
 
   const expression = `${leftNum} ${operation} ${rightNum}`;
