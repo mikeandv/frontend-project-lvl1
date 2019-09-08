@@ -50,3 +50,13 @@ $ brain-progression
 ```
 
 [![asciicast](https://asciinema.org/a/w4p2mXuiLvu3HGVcAcWhppxkA.svg)](https://asciinema.org/a/w4p2mXuiLvu3HGVcAcWhppxkA)
+
+### Brain-prime game
+
+To start "Is a prime?" game run the following command:
+
+```shell
+$ brain-prime
+```
+
+[![asciicast](https://asciinema.org/a/RCTfkVWmUa1Lp5j4aIwRgTkEW.svg)](https://asciinema.org/a/RCTfkVWmUa1Lp5j4aIwRgTkEW)
