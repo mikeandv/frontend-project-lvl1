@@ -7,9 +7,6 @@ import {
 const ruleText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrime = (num) => {
-  if (num === 2) {
-    return 'yes';
-  }
   if (num % 2 === 0) {
     return 'no';
   }
@@ -28,7 +25,7 @@ const isPrime = (num) => {
 
 const makeQuestion = () => {
   const number = getRandomNum(100);
-  return cons(number, `${isPrime(number)}`);
+  return cons(number, `${number === 2 ? 'yes' : isPrime(number)}`);
 };
 
 export default (stagesCount) => {
