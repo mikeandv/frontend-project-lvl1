@@ -1,7 +1,7 @@
 import { cons } from '@hexlet/pairs';
 import gameLogic from '../core';
 import {
-  generateQuestions, getRandomNumInRange, getRandomNum, pows, gcd,
+  generateQuestions, getRandomNumInRange, getRandomNum, pow, gcd,
 } from '../utils/questionsUtil';
 
 const ruleText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -18,7 +18,7 @@ const isPrime = (num) => {
     if (gcd(randomNum, num) > 1) {
       return 'no';
     }
-    if (pows(randomNum, num - 1, num) !== 1) {
+    if (pow(randomNum, num - 1, num) !== 1) {
       return 'no';
     }
   }

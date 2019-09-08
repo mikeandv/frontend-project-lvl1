@@ -20,15 +20,15 @@ export const mul = (a, b, m) => {
   return (mul(a, b - 1, m) + a) % m;
 };
 
-export const pows = (a, b, m) => {
+export const pow = (a, b, m) => {
   if (b === 0) {
     return 1;
   }
   if (b % 2 === 0) {
-    const t = pows(a, b / 2, m);
+    const t = pow(a, b / 2, m);
     return mul(t, t, m) % m;
   }
-  return (mul(pows(a, b - 1, m), a, m)) % m;
+  return (mul(pow(a, b - 1, m), a, m)) % m;
 };
 export const generateQuestions = (stagesCount, makeQ) => {
   const iter = (item, acc) => {
