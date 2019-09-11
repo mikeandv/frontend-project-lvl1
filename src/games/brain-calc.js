@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import gameLogic from '../core';
-import { generateQuestions, getRandomNum, getRandomNumInRange } from '../utils/questionsUtil';
+import { getRandomNum, getRandomNumInRange } from '../utils/questionsUtil';
 
 const ruleText = 'What is the result of the expression?';
 const MIN = 1;
@@ -41,7 +41,4 @@ const makeQuestion = () => {
   return cons(expression, expressionResult(leftNum, operation, rightNum));
 };
 
-export default (stagesCount) => {
-  const questions = generateQuestions(stagesCount, makeQuestion);
-  gameLogic(stagesCount, questions, ruleText);
-};
+export default (stagesCount) => gameLogic(stagesCount, makeQuestion, ruleText);

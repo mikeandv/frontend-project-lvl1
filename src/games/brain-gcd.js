@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import gameLogic from '../core';
-import { generateQuestions, getRandomNum, gcd } from '../utils/questionsUtil';
+import { getRandomNum, gcd } from '../utils/questionsUtil';
 
 const ruleText = 'Find the greatest common divisor of given numbers.';
 
@@ -12,7 +12,4 @@ const makeQuestion = () => {
   return cons(pairNums, `${gcd(numOne, numTwo)}`);
 };
 
-export default (stagesCount) => {
-  const questions = generateQuestions(stagesCount, makeQuestion);
-  gameLogic(stagesCount, questions, ruleText);
-};
+export default (stagesCount) => gameLogic(stagesCount, makeQuestion, ruleText);

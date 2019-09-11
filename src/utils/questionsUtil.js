@@ -1,5 +1,3 @@
-import { l, cons as consList } from '@hexlet/pairs-data';
-
 export const getRandomNum = (scale) => Math.round(Math.random() * scale);
 
 export const getRandomNumInRange = (min, max) => Math.floor(Math.random() * (max - min)) + min;
@@ -29,15 +27,4 @@ export const pow = (a, b, m) => {
     return mul(t, t, m) % m;
   }
   return (mul(pow(a, b - 1, m), a, m)) % m;
-};
-export const generateQuestions = (stagesCount, makeQ) => {
-  const iter = (item, acc) => {
-    if (item === 0) {
-      return acc;
-    }
-    const tmp5 = makeQ();
-    return iter(item - 1, consList(tmp5, acc));
-  };
-
-  return iter(stagesCount, l());
 };

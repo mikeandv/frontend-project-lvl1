@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import gameLogic from '../core';
-import { generateQuestions, getRandomNum } from '../utils/questionsUtil';
+import { getRandomNum } from '../utils/questionsUtil';
 
 const ruleText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,7 +11,4 @@ const makeQuestion = () => {
   return cons(number, isEven(number));
 };
 
-export default (stagesCount) => {
-  const questions = generateQuestions(stagesCount, makeQuestion);
-  gameLogic(stagesCount, questions, ruleText);
-};
+export default (stagesCount) => gameLogic(stagesCount, makeQuestion, ruleText);
