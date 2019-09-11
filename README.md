@@ -19,7 +19,7 @@ To start "Even Check" game run the following command:
 $ brain-even
 ```
 
-[![asciicast](ttps://asciinema.org/a/q45hnUKZOSV81Dc9CqQtgu3fH.svg)](ttps://asciinema.org/a/q45hnUKZOSV81Dc9CqQtgu3fH)
+[![asciicast](https://asciinema.org/a/q45hnUKZOSV81Dc9CqQtgu3fH.svg)](https://asciinema.org/a/q45hnUKZOSV81Dc9CqQtgu3fH)
 
 ### Brain-calc game
 
