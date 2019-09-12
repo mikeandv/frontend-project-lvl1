@@ -16,18 +16,18 @@ const testFerma = (repeats, num) => {
 };
 
 const isPrime = (num) => {
-  if (num % 2 === 0) {
-    return 'no';
-  }
   if (num === 2) {
     return 'yes';
+  }
+  if (num % 2 === 0) {
+    return 'no';
   }
   return testFerma(FERMA_TEST_REPEAT, num);
 };
 
 const makeQuestion = () => {
   const number = getRandomNum(100);
-  return cons(number, `${number === 2 ? 'yes' : isPrime(number)}`);
+  return cons(number, `${isPrime(number)}`);
 };
 
 export default (stagesCount) => gameLogic(stagesCount, makeQuestion, ruleText);
