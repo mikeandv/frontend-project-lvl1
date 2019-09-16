@@ -1,44 +1,44 @@
 import { cons } from '@hexlet/pairs';
+import {
+  l, head, tail, length,
+} from '@hexlet/pairs-data';
 import gameLogic from '../core';
 import { getRandomNum, getRandomNumInRange } from '../utils/questionsUtil';
 
-const ruleText = 'What is the result of the expression?';
-const MIN = 1;
-const MAX = 4;
-const randomOperator = (min, max) => {
-  const number = getRandomNumInRange(min, max);
-  switch (number) {
-    case 1:
-      return '+';
-    case 2:
-      return '-';
-    case 3:
-      return '*';
-    default:
-      return undefined;
-  }
+const RULE_TEXT = 'What is the result of the expression?';
+const OPERATOR_LIST = l('+', '-', '*');
+
+const getRandomOperator = (list) => {
+  const number = getRandomNumInRange(0, length(list)) - 1;
+  const loop = (counter, item) => {
+    if (counter === number) {
+      return head(item);
+    }
+    return loop(counter + 1, tail(list));
+  };
+  return loop(0, list);
 };
 
-const expressionResult = (leftNum, operation, rightNum) => {
+const getResult = (a, operation, b) => {
   switch (operation) {
     case '+':
-      return `${leftNum + rightNum}`;
+      return a + b;
     case '-':
-      return `${leftNum - rightNum}`;
+      return a - b;
     case '*':
-      return `${leftNum * rightNum}`;
+      return a * b;
     default:
-      return undefined;
+      return null;
   }
 };
 
 const makeQuestion = () => {
-  const leftNum = getRandomNum(100);
-  const rightNum = getRandomNum(100);
-  const operation = randomOperator(MIN, MAX);
+  const a = getRandomNum(100);
+  const b = getRandomNum(100);
+  const operation = getRandomOperator(OPERATOR_LIST);
 
-  const expression = `${leftNum} ${operation} ${rightNum}`;
-  return cons(expression, expressionResult(leftNum, operation, rightNum));
+  const question = `${a} ${operation} ${b}`;
+  return cons(question, `${getResult(a, operation, b)}`);
 };
 
-export default (stagesCount) => gameLogic(stagesCount, makeQuestion, ruleText);
+export default () => gameLogic(makeQuestion, RULE_TEXT);
