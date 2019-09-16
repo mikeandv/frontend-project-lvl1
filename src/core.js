@@ -1,24 +1,20 @@
 import readline from 'readline-sync';
 import { car, cdr } from '@hexlet/pairs';
 
-const greetings = (name) => {
-  console.log(`Hello, ${name}!\n`);
-};
-const welcome = (gameRules) => {
+const GAME_STAGES = 3;
+
+export default (questionMake, gameRules) => {
   console.log('Welcome to the Brain Games!');
   console.log(gameRules);
   console.log();
-};
-
-export default (stageCount, questionMake, gameRules) => {
-  welcome(gameRules);
   const playerName = readline.question('May I have your name? ');
-  greetings(playerName);
+  console.log(`Hello, ${playerName}!`);
+  console.log();
 
   const gameLoop = (stage) => {
     if (stage === 0) {
       console.log(`Congratulations, ${playerName}!`);
-      return undefined;
+      return null;
     }
 
     const question = questionMake();
@@ -28,11 +24,11 @@ export default (stageCount, questionMake, gameRules) => {
     if (cdr(question) !== answer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${cdr(question)}'.`);
       console.log(`Let's try again, ${playerName}!`);
-      return undefined;
+      return null;
     }
     console.log('Correct!');
 
     return gameLoop(stage - 1);
   };
-  return gameLoop(stageCount);
+  gameLoop(GAME_STAGES);
 };
