@@ -1,13 +1,12 @@
 {
   "name": "proj1-brain-games",
   "version": "1.0.0",
-  "description": "Проект Игры разума",
+  "description": "Project Brain Games",
   "keywords": [
     "brain",
     "games",
     "hexlet project"
   ],
-  "main": "src/bin/brain-games.js",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
