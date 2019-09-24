@@ -19,7 +19,7 @@ To start "Even Check" game run the following command:
 $ brain-even
 ```
 
-[![asciicast](https://asciinema.org/a/q45hnUKZOSV81Dc9CqQtgu3fH.svg)](https://asciinema.org/a/q45hnUKZOSV81Dc9CqQtgu3fH)
+[![asciicast](https://asciinema.org/a/dKiEEsiD9NP8AclhS1DdeP1La.svg)](https://asciinema.org/a/dKiEEsiD9NP8AclhS1DdeP1La)
 
 ### Brain-calc game
 
@@ -29,7 +29,7 @@ To start "Calculator" game run the following command:
 $ brain-calc
 ```
 
-[![asciicast](https://asciinema.org/a/DpNtrXFKJNza4EkfUEtyGJWXM.svg)](https://asciinema.org/a/DpNtrXFKJNza4EkfUEtyGJWXM)
+[![asciicast](https://asciinema.org/a/ldyk1p4vm9cO6QRjGY5lKR43M.svg)](https://asciinema.org/a/ldyk1p4vm9cO6QRjGY5lKR43M)
 
 ### Brain-gcd game
 
@@ -39,7 +39,7 @@ To start "Greatest common factor" game run the following command:
 $ brain-gcd
 ```
 
-[![asciicast](https://asciinema.org/a/LMl2pG9rk4kDiwHV89e3GdMAJ.svg)](https://asciinema.org/a/LMl2pG9rk4kDiwHV89e3GdMAJ)
+[![asciicast](https://asciinema.org/a/XZhpcyoHvbWazJe5uGWB0WsDW.svg)](https://asciinema.org/a/XZhpcyoHvbWazJe5uGWB0WsDW)
 
 ### Brain-progression game
 
@@ -49,7 +49,7 @@ To start "Arithmetic progression" game run the following command:
 $ brain-progression
 ```
 
-[![asciicast](https://asciinema.org/a/QS7zTlFlrZESfPzVY7NCqLwhT.svg)](https://asciinema.org/a/QS7zTlFlrZESfPzVY7NCqLwhT)
+[![asciicast](https://asciinema.org/a/rISbUG5MC8hL2mGAjX31maSIp.svg)](https://asciinema.org/a/rISbUG5MC8hL2mGAjX31maSIp)
 
 ### Brain-prime game
 
@@ -59,4 +59,4 @@ To start "Is a prime?" game run the following command:
 $ brain-prime
 ```
 
-[![asciicast](https://asciinema.org/a/gZKhy0FgGeM1eY6BWcxenQDho.svg)](https://asciinema.org/a/gZKhy0FgGeM1eY6BWcxenQDho)
+[![asciicast](https://asciinema.org/a/riE6x0lSaM3PIRlFZsxTdGMJI.svg)](https://asciinema.org/a/riE6x0lSaM3PIRlFZsxTdGMJI)
