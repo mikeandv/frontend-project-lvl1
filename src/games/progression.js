@@ -43,9 +43,9 @@ const hideProgressionElement = (progression, hidePosition) => {
 
 const makeTask = () => {
   const firstMember = getRandomInRange(1, 100);
-  const rogressionStep = getRandomInRange(progressionStepMin, progressionStepMax);
+  const progressionStep = getRandomInRange(progressionStepMin, progressionStepMax);
   const hidePosition = getRandomInRange(0, progressionLength - 1);
-  const progression = bildProgression(progressionLength - 1, rogressionStep, firstMember);
+  const progression = bildProgression(progressionLength - 1, progressionStep, firstMember);
 
   const question = hideProgressionElement(progression, hidePosition);
   const answer = `${getHidenElement(progression, hidePosition)}`;
