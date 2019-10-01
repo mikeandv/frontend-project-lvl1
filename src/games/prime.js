@@ -1,18 +1,17 @@
 import { cons } from '@hexlet/pairs';
 import { modPow, gcd as findGcd } from 'bigint-mod-arith';
-import runGameLogic from '../core';
+import runGame from '../core';
 import getRandomInRange from '../utils/questionsUtil';
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const fermaTestRepeatsCount = 20;
 
-const checkFermaTest = (repeatsCount, num) => {
+const testFerma = (num, repeatsCount = 20) => {
   if (repeatsCount === 0) {
     return true;
   }
   const random = getRandomInRange(2, num - 1);
   return Number(findGcd(random, num)) > 1
-     || Number(modPow(random, num - 1, num)) !== 1 ? false : checkFermaTest(repeatsCount - 1, num);
+     || Number(modPow(random, num - 1, num)) !== 1 ? false : testFerma(num, repeatsCount - 1);
 };
 
 const isPrime = (num) => {
@@ -22,14 +21,14 @@ const isPrime = (num) => {
   if (num % 2 === 0) {
     return false;
   }
-  return checkFermaTest(fermaTestRepeatsCount, num);
+  return testFerma(num);
 };
 
 const makeTask = () => {
-  const number = getRandomInRange(1, 100);
-  const answer = isPrime(number) ? 'yes' : 'no';
-  return cons(number, answer);
+  const question = getRandomInRange(1, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return cons(question, answer);
 };
 
 
-export default () => runGameLogic(makeTask, gameDescription);
+export default () => runGame(makeTask, gameDescription);
