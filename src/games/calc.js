@@ -1,6 +1,6 @@
 import { cons } from '@hexlet/pairs';
 import { l, random } from '@hexlet/pairs-data';
-import runGameLogic from '../core';
+import runGame from '../core';
 import getRandomInRange from '../utils/questionsUtil';
 
 const gameDescription = 'What is the result of the expression?';
@@ -25,8 +25,8 @@ const makeTask = () => {
   const operation = random(operations);
 
   const question = `${a} ${operation} ${b}`;
-  const answer = `${getResult(a, b, operation)}`;
+  const answer = getResult(a, b, operation).toString();
   return cons(question, answer);
 };
 
-export default () => runGameLogic(makeTask, gameDescription);
+export default () => runGame(makeTask, gameDescription);

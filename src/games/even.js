@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import runGameLogic from '../core';
+import runGame from '../core';
 import getRandomInRange from '../utils/questionsUtil';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -12,4 +12,4 @@ const makeTask = () => {
   return cons(question, answer);
 };
 
-export default () => runGameLogic(makeTask, gameDescription);
+export default () => runGame(makeTask, gameDescription);

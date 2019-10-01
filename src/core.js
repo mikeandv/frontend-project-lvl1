@@ -11,7 +11,7 @@ export default (makeTask, gameDescription) => {
   console.log(`Hello, ${playerName}!`);
   console.log();
 
-  const runGame = (stage) => {
+  const core = (stage) => {
     if (stage === 0) {
       console.log(`Congratulations, ${playerName}!`);
       return;
@@ -26,7 +26,7 @@ export default (makeTask, gameDescription) => {
       return;
     }
     console.log('Correct!');
-    runGame(stage - 1);
+    core(stage - 1);
   };
-  runGame(gameStagesCount);
+  core(gameStagesCount);
 };
