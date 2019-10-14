@@ -30,5 +30,4 @@ const makeTask = () => {
   return cons(question, answer);
 };
 
-
 export default () => runGame(makeTask, gameDescription);

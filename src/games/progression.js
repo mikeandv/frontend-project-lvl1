@@ -12,11 +12,11 @@ const progressionLength = 10;
 
 const buildProgression = (length, progressionStep, first) => {
   const iter = (item, acc) => {
-    if (item === 0) {
+    if (item === 1) {
       return reverse(acc);
     }
-    const nextElement = head(acc) + progressionStep;
-    return iter(item - 1, consList(nextElement, acc));
+    const currentElement = head(acc) + progressionStep;
+    return iter(item - 1, consList(currentElement, acc));
   };
   return iter(length, consList(first, l()));
 };
@@ -35,7 +35,7 @@ const makeTask = () => {
   const firstMember = getRandomInRange(1, 100);
   const progressionStep = getRandomInRange(progressionStepMin, progressionStepMax);
   const hideElementPosition = getRandomInRange(0, progressionLength - 1);
-  const progression = buildProgression(progressionLength - 1, progressionStep, firstMember);
+  const progression = buildProgression(progressionLength, progressionStep, firstMember);
 
   const question = makeQuestion(progression, hideElementPosition);
   const answer = (firstMember + (progressionStep * hideElementPosition)).toString();
